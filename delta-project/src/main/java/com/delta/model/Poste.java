@@ -2,50 +2,47 @@ package com.delta.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.Id;
 import javax.persistence.Table;
-
-import com.sun.istack.NotNull;
 
 @Entity
 @Table(name = "Poste")
-public class Poste {
+public class Poste{
 
-	@Column(name = "No_Poste")
-	@NotNull
-	private Integer No_Poste;
+	@Id
+	@Column(name = "no_poste")
+	private long no_poste;
 	
-	@Column(name = "Poste_Lib")
-	@NotNull
-	private Integer Poste_Lib;
+	@Column(name = "libelle")
+	private String libelle;
 
-	
-	
-	public Poste(Integer no_Poste, Integer poste_Lib) {
+	public Poste(long no_poste, String lib) {
 		super();
-		No_Poste = no_Poste;
-		Poste_Lib = poste_Lib;
+		this.no_poste = no_poste;
+		this.libelle = lib;
 	}
 
 	public Poste() {
 		super();
 	}
 
-	
-	
-	public Integer getNo_Poste() {
-		return No_Poste;
+	public long getNo_Poste() {
+		return no_poste;
 	}
 
-	public void setNo_Poste(Integer no_Poste) {
-		No_Poste = no_Poste;
+	public void setNo_Poste(long no_poste) {
+		this.no_poste = no_poste;
 	}
 
-	public Integer getPoste_Lib() {
-		return Poste_Lib;
+	public String getLib() {
+		return libelle;
 	}
 
-	public void setPoste_Lib(Integer poste_Lib) {
-		Poste_Lib = poste_Lib;
+	public void setLib(String lib) {
+		this.libelle = lib;
 	}
 	
+//	@Column(name = "Date_Maj")
+//	private Timestamp Date_Maj;
+
 }

@@ -17,51 +17,51 @@ public class Produit {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int Produit_Id;
 	
-	@Column(name = "Ope_Id")
-	private String Ope_Id;
+	@Column(name = "ope_id")
+	private String ope_id;
 	
-	@Column(name = "Libelle")
+	@Column(name = "libelle")
 	@NotNull
-	private String Libelle;
+	private String libelle;
 	
-	@Column(name = "Qte")
+	@Column(name = "qte")
 	@NotNull
-	private Integer Qte;
+	private Integer qte;
 	
-	@Column(name = "TH")
+	@Column(name = "th")
 	@NotNull
-	private double TH;
+	private double th;
 	
-	@Column(name = "CB")
+	@Column(name = "cb")
 	@NotNull
-	private double CB;
+	private double cb;
 	
-	@Column(name = "Prix_HT")
+	@Column(name = "prix_ht")
 	@NotNull
-	private double Prix_HT;
+	private double prix_ht;
 	
-	@Column(name = "Prix_TTC")
+	@Column(name = "prix_ttc")
 	@NotNull
-	private double Prix_TTC;
+	private double prix_ttc;
 	
-	@Column(name = "Sous_espece")
+	@Column(name = "sous_espece")
 	@NotNull
-	private String Sous_espece;
+	private String sous_espece;
 
 	
 	
 	public Produit(int produit_Id, String opeId, String libelle, Integer qte, double tH, double cB, double prix_HT,
 			double prix_TTC, String sous_espece) {
 		super();
-		Produit_Id = produit_Id;
-		Ope_Id = opeId;
-		Libelle = libelle;
-		Qte = qte;
-		TH = tH;
-		CB = cB;
-		Prix_HT = prix_HT;
-		Prix_TTC = prix_TTC;
-		Sous_espece = sous_espece;
+		this.Produit_Id = produit_Id;
+		this.ope_id = opeId;
+		this.libelle = libelle;
+		this.qte = qte;
+		this.th = tH;
+		this.cb = cB;
+		this.prix_ht = prix_HT;
+		this.prix_ttc = prix_TTC;
+		this.sous_espece = sous_espece;
 	}
 
 	
@@ -74,70 +74,70 @@ public class Produit {
 	}
 
 	public void setProduit_Id(int produit_Id) {
-		Produit_Id = produit_Id;
+		this.Produit_Id = produit_Id;
 	}
 
 	public String getOpeId() {
-		return Ope_Id;
+		return ope_id;
 	}
 
 	public void setOpe_Id(String opeId) {
-		Ope_Id = opeId;
+		this.ope_id = opeId;
 	}
 
 	public String getLibelle() {
-		return Libelle;
+		return libelle;
 	}
 
 	public void setLibelle(String libelle) {
-		Libelle = libelle;
+		this.libelle = libelle;
 	}
 
 	public Integer getQte() {
-		return Qte;
+		return qte;
 	}
 
 	public void setQte(Integer qte) {
-		Qte = qte;
+		this.qte = qte;
 	}
 
 	public double getTH() {
-		return TH;
+		return th;
 	}
 
 	public void setTH(double tH) {
-		TH = tH;
+		this.th = tH;
 	}
 
 	public double getCB() {
-		return CB;
+		return cb;
 	}
 
 	public void setCB(double cB) {
-		CB = cB;
+		this.cb = cB;
 	}
 
 	public double getPrix_HT() {
-		return Prix_HT;
+		return prix_ht;
 	}
 
 	public void setPrix_HT(double prix_HT) {
-		Prix_HT = prix_HT;
+		this.prix_ht = prix_HT;
 	}
 
 	public double getPrix_TTC() {
-		return Prix_TTC;
+		return prix_ttc;
 	}
 
 	public void setPrix_TTC(double prix_TTC) {
-		Prix_TTC = prix_TTC;
+		this.prix_ttc = prix_TTC;
 	}
 
 	public String getSous_espece() {
-		return Sous_espece;
+		return sous_espece;
 	}
 
 	public void setSous_espece(String sous_espece) {
-		Sous_espece = sous_espece;
+		this.sous_espece = sous_espece;
 	}
 }

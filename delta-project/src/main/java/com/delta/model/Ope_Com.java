@@ -19,24 +19,24 @@ public class Ope_Com {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int Ope_Id;
 	
-	@Column(name = "Libelle")
-	private String Libelle;
+	@Column(name = "libelle")
+	private String libelle;
 	
-	@Column(name = "Date_Deb")
-	private Date Date_Deb;
+	@Column(name = "date_deb")
+	private Date date_deb;
 	
-	@Column(name = "Date_Fin")
+	@Column(name = "date_fin")
 	@NotNull
-	private Date Date_Fin;
+	private Date date_fin;
 
 	
 	
 	public Ope_Com(int ope_Id, String libelle, Date date_Deb, Date date_Fin) {
 		super();
-		Ope_Id = ope_Id;
-		Libelle = libelle;
-		Date_Deb = date_Deb;
-		Date_Fin = date_Fin;
+		this.Ope_Id = ope_Id;
+		this.libelle = libelle;
+		this.date_deb = date_Deb;
+		this.date_fin = date_Fin;
 	}
 
 	public Ope_Com() {
@@ -50,30 +50,30 @@ public class Ope_Com {
 	}
 
 	public void setOpe_Id(int ope_Id) {
-		Ope_Id = ope_Id;
+		this.Ope_Id = ope_Id;
 	}
 
 	public String getLibelle() {
-		return Libelle;
+		return libelle;
 	}
 
 	public void setLibelle(String libelle) {
-		Libelle = libelle;
+		this.libelle = libelle;
 	}
 
 	public Date getDate_Deb() {
-		return Date_Deb;
+		return date_deb;
 	}
 
 	public void setDate_Deb(Date date_Deb) {
-		Date_Deb = date_Deb;
+		this.date_deb = date_Deb;
 	}
 
 	public Date getDate_Fin() {
-		return Date_Fin;
+		return date_fin;
 	}
 
 	public void setDate_Fin(Date date_Fin) {
-		Date_Fin = date_Fin;
+		this.date_fin = date_Fin;
 	}
 }

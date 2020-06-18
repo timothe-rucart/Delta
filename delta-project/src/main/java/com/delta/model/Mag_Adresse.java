@@ -19,55 +19,55 @@ public class Mag_Adresse {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int Mag_Adr_Id;
 	
-	@Column(name = "No_Mag")
+	@Column(name = "no_mag")
 	@NotNull
-	private String No_Mag;
+	private String no_mag;
 	
-	@Column(name = "Libelle")
-	private String Libelle;
+	@Column(name = "libelle")
+	private String libelle;
 	
-	@Column(name = "Pays")
-	private String Pays;
+	@Column(name = "pays")
+	private String pays;
 	
-	@Column(name = "Ville")
+	@Column(name = "ville")
 	@NotNull
-	private String Ville;
+	private String ville;
 	
-	@Column(name = "CP")
+	@Column(name = "cp")
 	@NotNull
-	private String CP;
+	private String cp;
 	
-	@Column(name = "Adresse")
+	@Column(name = "adresse")
 	@NotNull
-	private String Adresse;
+	private String adresse;
 	
-	@Column(name = "Numero")
+	@Column(name = "numero")
 	@NotNull
-	private String Numero;
+	private String numero;
 	
-	@Column(name = "No_Complement")
+	@Column(name = "no_complement")
 	@NotNull
-	private String No_Complement;
+	private String no_complement;
 	
-	@Column(name = "Date_Crea")
+	@Column(name = "date_crea")
 	@NotNull
-	private Date Date_Crea;
+	private Date date_crea;
 
 	
 	
 	public Mag_Adresse(int mag_Adr_Id, String no_Mag, String libelle, String pays, String ville, String cP,
 			String adresse, String numero, String no_Complement, Date date_Crea) {
 		super();
-		Mag_Adr_Id = mag_Adr_Id;
-		No_Mag = no_Mag;
-		Libelle = libelle;
-		Pays = pays;
-		Ville = ville;
-		CP = cP;
-		Adresse = adresse;
-		Numero = numero;
-		No_Complement = no_Complement;
-		Date_Crea = date_Crea;
+		this.Mag_Adr_Id = mag_Adr_Id;
+		this.no_mag = no_Mag;
+		this.libelle = libelle;
+		this.pays = pays;
+		this.ville = ville;
+		this.cp = cP;
+		this.adresse = adresse;
+		this.numero = numero;
+		this.no_complement = no_Complement;
+		this.date_crea = date_Crea;
 	}
 
 	public Mag_Adresse() {
@@ -80,79 +80,79 @@ public class Mag_Adresse {
 	}
 
 	public void setMag_Adr_Id(int mag_Adr_Id) {
-		Mag_Adr_Id = mag_Adr_Id;
+		this.Mag_Adr_Id = mag_Adr_Id;
 	}
 
 	public String getNo_Mag() {
-		return No_Mag;
+		return no_mag;
 	}
 
 	public void setNo_Mag(String no_Mag) {
-		No_Mag = no_Mag;
+		this.no_mag = no_Mag;
 	}
 
 	public String getLibelle() {
-		return Libelle;
+		return libelle;
 	}
 
 	public void setLibelle(String libelle) {
-		Libelle = libelle;
+		this.libelle = libelle;
 	}
 
 	public String getPays() {
-		return Pays;
+		return pays;
 	}
 
 	public void setPays(String pays) {
-		Pays = pays;
+		this.pays = pays;
 	}
 
 	public String getVille() {
-		return Ville;
+		return ville;
 	}
 
 	public void setVille(String ville) {
-		Ville = ville;
+		this.ville = ville;
 	}
 
 	public String getCP() {
-		return CP;
+		return cp;
 	}
 
 	public void setCP(String cP) {
-		CP = cP;
+		this.cp = cP;
 	}
 
 	public String getAdresse() {
-		return Adresse;
+		return adresse;
 	}
 
 	public void setAdresse(String adresse) {
-		Adresse = adresse;
+		this.adresse = adresse;
 	}
 
 	public String getNumero() {
-		return Numero;
+		return numero;
 	}
 
 	public void setNumero(String numero) {
-		Numero = numero;
+		this.numero = numero;
 	}
 
 	public String getNo_Complement() {
-		return No_Complement;
+		return no_complement;
 	}
 
 	public void setNo_Complement(String no_Complement) {
-		No_Complement = no_Complement;
+		this.no_complement = no_Complement;
 	}
 
 	public Date getDate_Crea() {
-		return Date_Crea;
+		return date_crea;
 	}
 
 	public void setDate_Crea(Date date_Crea) {
-		Date_Crea = date_Crea;
+		this.date_crea = date_Crea;
 	}
 	
 }

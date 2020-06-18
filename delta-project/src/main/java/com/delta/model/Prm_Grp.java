@@ -1,48 +1,53 @@
 package com.delta.model;
 
-import java.util.Date;
+import java.io.Serializable;
+import java.sql.Timestamp;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.IdClass;
 import javax.persistence.Table;
 
 import com.sun.istack.NotNull;
 
 @Entity
 @Table(name = "Prm_Grp")
-public class Prm_Grp {
+@IdClass(Prm_Grp.class)
+public class Prm_Grp  implements Serializable {
 
-	
-	@Column(name = "Grp_Typ")
+	@Id
+	@Column(name = "grp_typ")
 	@NotNull	
-	private String Grp_Typ;
+	private String grp_typ;
 	
-	@Column(name = "Grp")
+	@Id
+	@Column(name = "grp")
 	@NotNull	
-	private String Grp;
+	private String grp;
 
-	@Column(name = "Libelle")
+	@Column(name = "libelle")
 	@NotNull
-	private String Libelle;
+	private String libelle;
 
-	@Column(name = "Date_Deb")
-	private Date Date_Deb;
+	@Column(name = "date_deb")
+	private Timestamp date_deb;
 	
-	@Column(name = "Date_Fin")
-	private Date Date_Fin;
+	@Column(name = "date_fin")
+	private Timestamp date_fin;
 	
-	@Column(name = "Util_Maj")
+	@Column(name = "util_maj")
 	@NotNull
-	private Date Util_Maj;
+	private String util_maj;
 
-	public Prm_Grp(String grp_Typ, String grp, String libelle, Date date_Deb, Date date_Fin, Date util_Maj) {
+	public Prm_Grp(String grp_Typ, String grp, String libelle, Timestamp date_Deb, Timestamp date_Fin, String util_Maj) {
 		super();
-		Grp_Typ = grp_Typ;
-		Grp = grp;
-		Libelle = libelle;
-		Date_Deb = date_Deb;
-		Date_Fin = date_Fin;
-		Util_Maj = util_Maj;
+		this.grp_typ = grp_Typ;
+		this.grp = grp;
+		this.libelle = libelle;
+		this.date_deb = date_Deb;
+		this.date_fin = date_Fin;
+		this.util_maj = util_Maj;
 	}
 
 	public Prm_Grp() {
@@ -50,50 +55,50 @@ public class Prm_Grp {
 	}
 
 	public String getGrp_Typ() {
-		return Grp_Typ;
+		return grp_typ;
 	}
 
 	public void setGrp_Typ(String grp_Typ) {
-		Grp_Typ = grp_Typ;
+		this.grp_typ = grp_Typ;
 	}
 
 	public String getGrp() {
-		return Grp;
+		return grp;
 	}
 
 	public void setGrp(String grp) {
-		Grp = grp;
+		this.grp = grp;
 	}
 
 	public String getLibelle() {
-		return Libelle;
+		return libelle;
 	}
 
 	public void setLibelle(String libelle) {
-		Libelle = libelle;
+		this.libelle = libelle;
 	}
 
-	public Date getDate_Deb() {
-		return Date_Deb;
+	public Timestamp getDate_Deb() {
+		return date_deb;
 	}
 
-	public void setDate_Deb(Date date_Deb) {
-		Date_Deb = date_Deb;
+	public void setDate_Deb(Timestamp date_Deb) {
+		this.date_deb = date_Deb;
 	}
 
-	public Date getDate_Fin() {
-		return Date_Fin;
+	public Timestamp getDate_Fin() {
+		return date_fin;
 	}
 
-	public void setDate_Fin(Date date_Fin) {
-		Date_Fin = date_Fin;
+	public void setDate_Fin(Timestamp date_Fin) {
+		this.date_fin = date_Fin;
 	}
 
-	public Date getUtil_Maj() {
-		return Util_Maj;
+	public String getUtil_Maj() {
+		return util_maj;
 	}
 
-	public void setUtil_Maj(Date util_Maj) {
-		Util_Maj = util_Maj;
+	public void setUtil_Maj(String util_Maj) {
+		this.util_maj = util_Maj;
 	}
 }

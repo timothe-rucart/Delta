@@ -19,62 +19,62 @@ public class Cli_Adresse {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int Adr_Id;
 	
-	@Column(name = "Prenom")
+	@Column(name = "prenom")
 	@NotNull
-	private String Prenom;
+	private String prenom;
 	
-	@Column(name = "Nom")
+	@Column(name = "nom")
 	@NotNull
-	private String Nom;
+	private String nom;
 	
-	@Column(name = "Libelle")
-	private String Libelle;
+	@Column(name = "libelle")
+	private String libelle;
 	
-	@Column(name = "Pays")
+	@Column(name = "pays")
 	@NotNull
-	private Date Pays;
+	private Date pays;
 	
-	@Column(name = "Ville")
+	@Column(name = "ville")
 	@NotNull
-	private String Ville;
+	private String ville;
 	
-	@Column(name = "CP")
+	@Column(name = "cp")
 	@NotNull
-	private String CP;
+	private String cp;
 	
-	@Column(name = "Adresse")
+	@Column(name = "adresse")
 	@NotNull
-	private String Adresse;
+	private String adresse;
 	
-	@Column(name = "Numero")
+	@Column(name = "numero")
 	@NotNull
-	private String Numero;
+	private String numero;
 	
-	@Column(name = "No_Complement")
-	private String No_Complement;
+	@Column(name = "no_complement")
+	private String no_complement;
 	
-	@Column(name = "Commentaire")
-	private String Commentaire;
+	@Column(name = "commentaire")
+	private String commentaire;
 	
-	@Column(name = "Date_Crea")
+	@Column(name = "date_crea")
 	@NotNull
-	private Date Date_Crea;
+	private Date date_crea;
 
 	public Cli_Adresse(int adr_Id, String prenom, String nom, String libelle, Date pays, String ville, String cP,
 			String adresse, String numero, String no_Complement, String commentaire, Date date_Crea) {
 		super();
-		Adr_Id = adr_Id;
-		Prenom = prenom;
-		Nom = nom;
-		Libelle = libelle;
-		Pays = pays;
-		Ville = ville;
-		CP = cP;
-		Adresse = adresse;
-		Numero = numero;
-		No_Complement = no_Complement;
-		Commentaire = commentaire;
-		Date_Crea = date_Crea;
+		this.Adr_Id = adr_Id;
+		this.prenom = prenom;
+		this.nom = nom;
+		this.libelle = libelle;
+		this.pays = pays;
+		this.ville = ville;
+		this.cp = cP;
+		this.adresse = adresse;
+		this.numero = numero;
+		this.no_complement = no_Complement;
+		this.commentaire = commentaire;
+		this.date_crea = date_Crea;
 	}
 
 	public Cli_Adresse() {
@@ -91,91 +91,91 @@ public class Cli_Adresse {
 	}
 
 	public String getPrenom() {
-		return Prenom;
+		return prenom;
 	}
 
 	public void setPrenom(String prenom) {
-		Prenom = prenom;
+		this.prenom = prenom;
 	}
 
 	public String getNom() {
-		return Nom;
+		return nom;
 	}
 
 	public void setNom(String nom) {
-		Nom = nom;
+		this.nom = nom;
 	}
 
 	public String getLibelle() {
-		return Libelle;
+		return libelle;
 	}
 
 	public void setLibelle(String libelle) {
-		Libelle = libelle;
+		this.libelle = libelle;
 	}
 
 	public Date getPays() {
-		return Pays;
+		return pays;
 	}
 
 	public void setPays(Date pays) {
-		Pays = pays;
+		this.pays = pays;
 	}
 
 	public String getVille() {
-		return Ville;
+		return ville;
 	}
 
 	public void setVille(String ville) {
-		Ville = ville;
+		this.ville = ville;
 	}
 
 	public String getCP() {
-		return CP;
+		return cp;
 	}
 
 	public void setCP(String cP) {
-		CP = cP;
+		this.cp = cP;
 	}
 
 	public String getAdresse() {
-		return Adresse;
+		return adresse;
 	}
 
 	public void setAdresse(String adresse) {
-		Adresse = adresse;
+		this.adresse = adresse;
 	}
 
 	public String getNumero() {
-		return Numero;
+		return numero;
 	}
 
 	public void setNumero(String numero) {
-		Numero = numero;
+		this.numero = numero;
 	}
 
 	public String getNo_Complement() {
-		return No_Complement;
+		return no_complement;
 	}
 
 	public void setNo_Complement(String no_Complement) {
-		No_Complement = no_Complement;
+		this.no_complement = no_Complement;
 	}
 
 	public String getCommentaire() {
-		return Commentaire;
+		return commentaire;
 	}
 
 	public void setCommentaire(String commentaire) {
-		Commentaire = commentaire;
+		this.commentaire = commentaire;
 	}
 
 	public Date getDate_Crea() {
-		return Date_Crea;
+		return date_crea;
 	}
 
 	public void setDate_Crea(Date date_Crea) {
-		Date_Crea = date_Crea;
+		this.date_crea = date_Crea;
 	}
 	
 }

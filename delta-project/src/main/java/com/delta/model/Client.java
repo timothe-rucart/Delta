@@ -1,6 +1,6 @@
 package com.delta.model;
 
-import java.util.Date;
+import java.sql.Timestamp;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -9,151 +9,151 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.sun.istack.NotNull;
 
 @Entity
-@Table(name = "Personne")
+@Table(name = "Client")
 public class Client {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int Cli_Id;
+	private long Cli_Id;
 
-	@Column(name = "Adr_Id")
+	@Column(name = "adr_id")
 	@NotNull	
-	private String Adr_Id;
+	private long adr_id;
 
-	@Column(name = "Prenom")
+	@Column(name = "prenom")
 	@NotNull
-	private String Prenom;
+	private String prenom;
 
-	@Column(name = "Nom")
+	@Column(name = "nom")
 	@NotNull
-	private String Nom;
+	private String nom;
 
-	@Column(name = "Civilite")
+	@Column(name = "civilite")
 	@NotNull
-	private String Civilite;
+	private char civilite;
 
-	@Column(name = "Date_Naiss")
+	@Column(name = "date_naiss")
 	@NotNull
-	private Date Date_Naiss;
+	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern="yyyy-MM-dd HH:mm:ss")
+	private Timestamp date_naiss;
 
-	@Column(name = "Langue")
+	@Column(name = "langue")
 	@NotNull
-	private Date Langue;
+	private String langue;
 
-	@Column(name = "No_Portable")
-	private Date No_Portable;
+	@Column(name = "no_portable")
+	private String no_portable;
 
-	@Column(name = "Email")
-	private Date Email;
+	@Column(name = "email")
+	private String email;
 
-	@Column(name = "Date_Crea")
-	private Date Date_Crea;
-
+	@Column(name = "date_crea")
+	@NotNull
+	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern="yyyy-MM-dd HH:mm:ss")
+	private Timestamp  date_crea;
 
 
 	public Client() {
 		super();
 	}
 
-	public Client(int cli_Id, String adr_Id, String prenom, String nom, String civilite, Date date_Naiss, Date langue,
-			Date no_Portable, Date email, Date date_Crea) {
+	public Client(Integer cli_Id, long adr_Id, String prenom, String nom, char civilite, Timestamp date_Naiss, String langue,
+			String no_Portable, String email, Timestamp date_Crea) {
 		super();
-		Cli_Id = cli_Id;
-		Adr_Id = adr_Id;
-		Prenom = prenom;
-		Nom = nom;
-		Civilite = civilite;
-		Date_Naiss = date_Naiss;
-		Langue = langue;
-		No_Portable = no_Portable;
-		Email = email;
-		Date_Crea = date_Crea;
+		this.Cli_Id = cli_Id;
+		this.adr_id = adr_Id;
+		this.prenom = prenom;
+		this.nom = nom;
+		this.civilite = civilite;
+		this.date_naiss = date_Naiss;
+		this.langue = langue;
+		this.no_portable = no_Portable;
+		this.email = email;
+		this.date_crea = date_Crea;
 	}
 
-
-	public int getCli_Id() {
+	public long getCli_Id() {
 		return Cli_Id;
 	}
 
-	public void setCli_Id(int cli_Id) {
+	public void setCli_Id(long cli_Id) {
 		Cli_Id = cli_Id;
 	}
 
-	public String getAdr_Id() {
-		return Adr_Id;
+	public long getAdr_id() {
+		return adr_id;
 	}
 
-	public void setAdr_Id(String adr_Id) {
-		Adr_Id = adr_Id;
+	public void setAdr_id(long adr_id) {
+		this.adr_id = adr_id;
 	}
 
 	public String getPrenom() {
-		return Prenom;
+		return prenom;
 	}
 
 	public void setPrenom(String prenom) {
-		Prenom = prenom;
+		this.prenom = prenom;
 	}
 
 	public String getNom() {
-		return Nom;
+		return nom;
 	}
 
 	public void setNom(String nom) {
-		Nom = nom;
+		this.nom = nom;
 	}
 
-	public String getCivilite() {
-		return Civilite;
+	public char getCivilite() {
+		return civilite;
 	}
 
-	public void setCivilite(String civilite) {
-		Civilite = civilite;
+	public void setCivilite(char civilite) {
+		this.civilite = civilite;
 	}
 
-	public Date getDate_Naiss() {
-		return Date_Naiss;
+	public Timestamp getDate_naiss() {
+		return date_naiss;
 	}
 
-	public void setDate_Naiss(Date date_Naiss) {
-		Date_Naiss = date_Naiss;
+	public void setDate_naiss(Timestamp date_naiss) {
+		this.date_naiss = date_naiss;
 	}
 
-	public Date getLangue() {
-		return Langue;
+	public String getLangue() {
+		return langue;
 	}
 
-	public void setLangue(Date langue) {
-		Langue = langue;
+	public void setLangue(String langue) {
+		this.langue = langue;
 	}
 
-	public Date getNo_Portable() {
-		return No_Portable;
+	public String getNo_portable() {
+		return no_portable;
 	}
 
-	public void setNo_Portable(Date no_Portable) {
-		No_Portable = no_Portable;
+	public void setNo_portable(String no_portable) {
+		this.no_portable = no_portable;
 	}
 
-	public Date getEmail() {
-		return Email;
+	public String getEmail() {
+		return email;
 	}
 
-	public void setEmail(Date email) {
-		Email = email;
+	public void setEmail(String email) {
+		this.email = email;
 	}
 
-	public Date getDate_Crea() {
-		return Date_Crea;
+	public Timestamp getDate_crea() {
+		return date_crea;
 	}
 
-	public void setDate_Crea(Date date_Crea) {
-		Date_Crea = date_Crea;
+	public void setDate_crea(Timestamp date_crea) {
+		this.date_crea = date_crea;
 	}
-
-
 
 }

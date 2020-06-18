@@ -19,40 +19,40 @@ public class Avis {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int Avis_Id;
 	
-	@Column(name = "Cli_Id")
+	@Column(name = "cli_id")
 	@NotNull
-	private Integer Cli_Id;
+	private Integer cli_id;
 	
-	@Column(name = "Produit_Id")
+	@Column(name = "produit_id")
 	@NotNull
-	private Integer Produit_Id;
+	private Integer produit_id;
 	
-	@Column(name = "Tic_Id")
+	@Column(name = "tic_id")
 	@NotNull
-	private Integer Tic_Id;
+	private Integer tic_id;
 	
-	@Column(name = "Descriptif")
+	@Column(name = "descriptif")
 	@NotNull
-	private String Descriptif;
+	private String descriptif;
 	
-	@Column(name = "Note")
+	@Column(name = "note")
 	@NotNull
-	private Integer Note;
+	private Integer note;
 	
-	@Column(name = "Date_Save")
+	@Column(name = "date_save")
 	@NotNull
-	private Date Date_Save;
+	private Date date_save;
 
 	public Avis(int avis_Id, Integer cli_Id, Integer produit_Id, Integer tic_Id, String descriptif, Integer note,
 			Date date_Save) {
 		super();
-		Avis_Id = avis_Id;
-		Cli_Id = cli_Id;
-		Produit_Id = produit_Id;
-		Tic_Id = tic_Id;
-		Descriptif = descriptif;
-		Note = note;
-		Date_Save = date_Save;
+		this.Avis_Id = avis_Id;
+		this.cli_id = cli_Id;
+		this.produit_id = produit_Id;
+		this.tic_id = tic_Id;
+		this.descriptif = descriptif;
+		this.note = note;
+		this.date_save = date_Save;
 	}
 
 	public Avis() {
@@ -66,54 +66,54 @@ public class Avis {
 	}
 
 	public void setAvis_Id(int avis_Id) {
-		Avis_Id = avis_Id;
+		this.Avis_Id = avis_Id;
 	}
 
 	public Integer getCli_Id() {
-		return Cli_Id;
+		return cli_id;
 	}
 
 	public void setCli_Id(Integer cli_Id) {
-		Cli_Id = cli_Id;
+		this.cli_id = cli_Id;
 	}
 
 	public Integer getProduit_Id() {
-		return Produit_Id;
+		return produit_id;
 	}
 
 	public void setProduit_Id(Integer produit_Id) {
-		Produit_Id = produit_Id;
+		this.produit_id = produit_Id;
 	}
 
 	public Integer getTic_Id() {
-		return Tic_Id;
+		return tic_id;
 	}
 
 	public void setTic_Id(Integer tic_Id) {
-		Tic_Id = tic_Id;
+		this.tic_id = tic_Id;
 	}
 
 	public String getDescriptif() {
-		return Descriptif;
+		return descriptif;
 	}
 
 	public void setDescriptif(String descriptif) {
-		Descriptif = descriptif;
+		this.descriptif = descriptif;
 	}
 
 	public Integer getNote() {
-		return Note;
+		return note;
 	}
 
 	public void setNote(Integer note) {
-		Note = note;
+		this.note = note;
 	}
 
 	public Date getDate_Save() {
-		return Date_Save;
+		return date_save;
 	}
 
 	public void setDate_Save(Date date_Save) {
-		Date_Save = date_Save;
+		this.date_save = date_Save;
 	}
 }

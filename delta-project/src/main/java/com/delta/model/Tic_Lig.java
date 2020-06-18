@@ -1,137 +1,143 @@
 package com.delta.model;
 
+import java.io.Serializable;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.IdClass;
 import javax.persistence.Table;
 
 import com.sun.istack.NotNull;
 
 @Entity
 @Table(name = "Tic_Lig")
-public class Tic_Lig {
+@IdClass(Tic_Lig.class)
+public class Tic_Lig implements Serializable {
 
-	
-	@Column(name = "Tic_Id")
+	@Id
+	@Column(name = "tic_id")
 	@NotNull
-	private Integer Tic_Id;
+	private Integer tic_id;
 	
-	@Column(name = "Tic_Lig")
+	@Id
+	@Column(name = "tic_lig")
 	@NotNull
-	private Integer Tic_Lig;
+	private Integer tic_lig;
 	
-	@Column(name = "Produit_Id")
+	@Column(name = "produit_id")
 	@NotNull
-	private Integer Produit_Id;
+	private Integer produit_id;
 	
-	@Column(name = "Prix_Base")
-	private Integer Prix_Base;
+	@Column(name = "prix_base")
+	private double prix_base;
 	
-	@Column(name = "Prix_Paye")
+	@Column(name = "prix_paye")
 	@NotNull
-	private Integer Prix_Paye;
+	private double prix_paye;
 	
-	@Column(name = "Ope_Id")
-	private Integer Ope_Id;
+	@Column(name = "ope_id")
+	private Integer ope_id;
 	
-	@Column(name = "Qte_Art")
+	@Column(name = "qte_art")
 	@NotNull
-	private Integer Qte_Art;
+	private Integer qte_art;
 	
-	@Column(name = "TVA_Taux")
+	@Column(name = "tva_taux")
 	@NotNull
-	private Integer TVA_Taux;
+	private double tva_taux;
 	
-	@Column(name = "TVA_Payee")
+	@Column(name = "tva_payee")
 	@NotNull
-	private Integer TVA_Payee;
+	private double tva_payee;
 
-	public Tic_Lig(Integer tic_Id, Integer tic_Lig, Integer produit_Id, Integer prix_Base, Integer prix_Paye,
-			Integer ope_Id, Integer qte_Art, Integer tVA_Taux, Integer tVA_Payee) {
+	public Tic_Lig(Integer tic_Id, Integer tic_Lig, Integer produit_Id, double prix_Base, double prix_Paye,
+			Integer ope_Id, Integer qte_Art, double tVA_Taux, double tVA_Payee) {
 		super();
-		Tic_Id = tic_Id;
-		Tic_Lig = tic_Lig;
-		Produit_Id = produit_Id;
-		Prix_Base = prix_Base;
-		Prix_Paye = prix_Paye;
-		Ope_Id = ope_Id;
-		Qte_Art = qte_Art;
-		TVA_Taux = tVA_Taux;
-		TVA_Payee = tVA_Payee;
+		this.tic_id = tic_Id;
+		this.tic_lig = tic_Lig;
+		this.produit_id = produit_Id;
+		this.prix_base = prix_Base;
+		this.prix_paye = prix_Paye;
+		this.ope_id = ope_Id;
+		this.qte_art = qte_Art;
+		this.tva_taux = tVA_Taux;
+		this.tva_payee = tVA_Payee;
 	}
 
 	public Tic_Lig() {
 		super();
 	}
 
-	public Integer getTic_Id() {
-		return Tic_Id;
+	public Integer getTic_id() {
+		return tic_id;
 	}
 
-	public void setTic_Id(Integer tic_Id) {
-		Tic_Id = tic_Id;
+	public void setTic_id(Integer tic_id) {
+		this.tic_id = tic_id;
 	}
 
-	public Integer getTic_Lig() {
-		return Tic_Lig;
+	public Integer getTic_lig() {
+		return tic_lig;
 	}
 
-	public void setTic_Lig(Integer tic_Lig) {
-		Tic_Lig = tic_Lig;
+	public void setTic_lig(Integer tic_lig) {
+		this.tic_lig = tic_lig;
 	}
 
-	public Integer getProduit_Id() {
-		return Produit_Id;
+	public Integer getProduit_id() {
+		return produit_id;
 	}
 
-	public void setProduit_Id(Integer produit_Id) {
-		Produit_Id = produit_Id;
+	public void setProduit_id(Integer produit_id) {
+		this.produit_id = produit_id;
 	}
 
-	public Integer getPrix_Base() {
-		return Prix_Base;
+	public double getPrix_base() {
+		return prix_base;
 	}
 
-	public void setPrix_Base(Integer prix_Base) {
-		Prix_Base = prix_Base;
+	public void setPrix_base(double prix_base) {
+		this.prix_base = prix_base;
 	}
 
-	public Integer getPrix_Paye() {
-		return Prix_Paye;
+	public double getPrix_paye() {
+		return prix_paye;
 	}
 
-	public void setPrix_Paye(Integer prix_Paye) {
-		Prix_Paye = prix_Paye;
+	public void setPrix_paye(double prix_paye) {
+		this.prix_paye = prix_paye;
 	}
 
-	public Integer getOpe_Id() {
-		return Ope_Id;
+	public Integer getOpe_id() {
+		return ope_id;
 	}
 
-	public void setOpe_Id(Integer ope_Id) {
-		Ope_Id = ope_Id;
+	public void setOpe_id(Integer ope_id) {
+		this.ope_id = ope_id;
 	}
 
-	public Integer getQte_Art() {
-		return Qte_Art;
+	public Integer getQte_art() {
+		return qte_art;
 	}
 
-	public void setQte_Art(Integer qte_Art) {
-		Qte_Art = qte_Art;
+	public void setQte_art(Integer qte_art) {
+		this.qte_art = qte_art;
 	}
 
-	public Integer getTVA_Taux() {
-		return TVA_Taux;
+	public double getTva_taux() {
+		return tva_taux;
 	}
 
-	public void setTVA_Taux(Integer tVA_Taux) {
-		TVA_Taux = tVA_Taux;
+	public void setTva_taux(double tva_taux) {
+		this.tva_taux = tva_taux;
 	}
 
-	public Integer getTVA_Payee() {
-		return TVA_Payee;
+	public double getTva_payee() {
+		return tva_payee;
 	}
 
-	public void setTVA_Payee(Integer tVA_Payee) {
-		TVA_Payee = tVA_Payee;
+	public void setTva_payee(double tva_payee) {
+		this.tva_payee = tva_payee;
 	}
 }
